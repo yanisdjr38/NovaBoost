@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBoost – Landing Page</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fichier CSS principal -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header principale -->
+    <header id="header">
+      <div class="container header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <!-- Si vous avez un fichier image, utilisez :
+          <img src="img/logo.png" alt="Logo NovaBoost" />
+          Sinon, écrivez directement du texte : -->
+          <img src="./img/logo.png" alt="logo_header" />
+        </div>
+
+        <!-- Menu de navigation -->
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#header">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Bouton burger pour mobile (sera caché en desktop) -->
+        <div class="menu-toggle">☰</div>
+      </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section id="hero">
+      <div class="container hero-container">
+        <!-- Texte à gauche -->
+        <div class="hero-text">
+          <h2>Boostez votre business en ligne avec NovaBoost</h2>
+          <a href="#contact" class="btn-cta">Demander un devis gratuit</a>
+        </div>
+
+        <!-- Conteneur qui aura l’image en background -->
+        <div class="hero-background"></div>
+      </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services">
+      <div class="container">
+        <h2>Nos services</h2>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <article class="service-card">
+            <img
+              src="img/services/creation.svg"
+              alt="Création de site web"
+              class="service-icon"
+            />
+            <h3>Création de site web</h3>
+            <p>
+              Des sites sur-mesure, modernes et performants pour mettre votre
+              entreprise en avant.
+            </p>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card">
+            <img
+              src="img/services/meta-ads.svg"
+              alt="Publicité Meta Ads"
+              class="service-icon"
+            />
+            <h3>Publicité Meta Ads</h3>
+            <p>
+              Campagnes ciblées sur Facebook & Instagram pour augmenter votre
+              visibilité.
+            </p>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card">
+            <img
+              src="img/services/seo.svg"
+              alt="SEO / Référencement"
+              class="service-icon"
+            />
+            <h3>SEO / Référencement</h3>
+            <p>
+              Optimisation de votre site pour atteindre la première page de
+              Google.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Section À propos -->
+    <section id="about">
+      <div class="container">
+        <h2>À propos de NovaBoost</h2>
+        <p>
+          Chez NovaBoost, nous sommes une équipe de passionnés du digital. Notre
+          mission : accompagner les entreprises dans leur croissance en ligne
+          grâce à des stratégies sur mesure et des campagnes percutantes. Forts
+          d’une expertise en développement web, en publicité digitale et en SEO,
+          nous mettons tout en œuvre pour vous aider à atteindre vos objectifs.
+        </p>
+      </div>
+    </section>
+    <!-- Section Témoignages -->
+    <section id="testimonials">
+      <div class="container">
+        <h2>Témoignages</h2>
+        <div class="testimonials-grid">
+          <!-- Témoignage 1 -->
+          <div class="testimonial-card">
+            <img
+              src="img/testimonials/t1.jpg"
+              alt="Jean Dupont"
+              class="testimonial-avatar"
+            />
+            <blockquote>
+              “Grâce à NovaBoost, notre trafic a augmenté de 50 % en 3 mois !
+              Leur équipe est à l’écoute et hyper réactive.”
+            </blockquote>
+            <p class="testimonial-author">Jean Dupont – CEO de StartUpX</p>
+          </div>
+          <!-- Témoignage 2 -->
+          <div class="testimonial-card">
+            <img
+              src="img/testimonials/t2.jpg"
+              alt="Marie Martin"
+              class="testimonial-avatar"
+            />
+            <blockquote>
+              “Équipe réactive et conseils pointus. On recommande vivement
+              NovaBoost pour booster votre présence en ligne.”
+            </blockquote>
+            <p class="testimonial-author">
+              Marie Martin – Responsable Marketing chez OmegaCorp
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="post" class="contact-form">
+          <!-- Groupe 1 : Nom -->
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre nom"
+              required
+            />
+          </div>
+          <!-- Groupe 2 : Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+              required
+            />
+          </div>
+          <!-- Groupe 3 : Message (textarea) -->
+          <div class="form-group form-group-full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Votre message"
+              required
+            ></textarea>
+          </div>
+          <!-- Bouton Envoyer -->
+          <button type="submit" class="btn-cta">Envoyer</button>
+          <p class="note">Nous vous répondrons sous 24 h.</p>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container footer-container">
+        <!-- Icônes réseaux sociaux -->
+        <div class="socials">
+          <a href="#"><img src="img/social/facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="img/social/linkedin.svg" alt="LinkedIn" /></a>
+          <a href="#"><img src="img/social/instagram.svg" alt="Instagram" /></a>
+        </div>
+        <!-- Mentions légales -->
+        <p class="legal"><a href="#">Mentions légales</a></p>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+
+    <!-- Ici on ajoutera, plus bas, Services / À propos / Témoignages / Contact / Footer -->
+  </body>
+</html>
