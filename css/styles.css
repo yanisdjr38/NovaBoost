@@ -167,15 +167,13 @@ ul {
 
 /* Conteur de l'image en background */
 .hero-background {
-  width: 55%; /* Ajustez pour équilibrer avec le texte */
-  height: 100%;
+  width: 40em;
+  height: 20em;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 /* ---------- SERVICES ---------- */
@@ -202,7 +200,8 @@ ul {
   text-align: center;
 }
 .service-icon {
-  width: 60px;
+  width: 10em;
+  height: 10em;
   margin-bottom: 20px;
 }
 .service-card h3 {
