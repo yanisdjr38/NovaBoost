@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaBoost – Landing Page</title>
+    <title>
+      NovaBoost – Agence Marketing Digital | Création de sites, Meta Ads & SEO
+    </title>
+    <meta
+      name="description"
+      content="NovaBoost, agence marketing digital, accompagne votre croissance en ligne : création de sites web, campagnes Meta Ads et optimisation SEO. Demandez un devis gratuit !"
+    />
+    <meta
+      property="og:title"
+      content="NovaBoost – Boostez votre business en ligne"
+    />
+    <meta
+      property="og:description"
+      content="Agence NovaBoost : création de sites web, publicité Meta Ads et SEO. Contactez-nous pour un devis gratuit !"
+    />
+    <meta
+      property="og:image"
+      content="https://votre-utilisateur.github.io/NovaBoost/img/og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://votre-utilisateur.github.io/NovaBoost/"
+    />
+    <meta property="og:type" content="website" />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
@@ -15,6 +39,12 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+      integrity="sha512-N/jp3ZsZ2z1dcBa1q6AOHoYsKJeaOZbzp3/tBBU8n5XGxCBwY7Qb2i8v80lCM5zMxBKmRb8uW/2oKM/evUD+6g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <div id="preloader">
@@ -65,7 +95,15 @@
         <h2 data-aos="fade-up">Nos services</h2>
         <div class="services-grid">
           <!-- Service 1 -->
-          <article class="service-card" data-aos="zoom-in" data-aos-delay="100">
+          <article
+            class="service-card"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.3"
+            data-tilt-scale="1.03"
+          >
             <img
               src="img/services/creation.png"
               alt="Création de site web"
@@ -121,6 +159,134 @@
         </p>
       </div>
     </section>
+
+    <!-- =======================
+   ÉQUIPE (TEAM)
+   ======================= -->
+    <section id="team">
+      <div class="container">
+        <h2 data-aos="fade-up">Notre équipe</h2>
+        <div class="team-grid">
+          <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+            <img
+              src="img/team/member1.png"
+              alt="Alice Dubois"
+              class="team-photo"
+            />
+            <h3>Alice Dubois</h3>
+            <p>Fondatrice & Chef de projet</p>
+          </div>
+
+          <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+            <img
+              src="img/team/member2.png"
+              alt="Marc Lemoine"
+              class="team-photo"
+            />
+            <h3>Marc Lemoine</h3>
+            <p>Responsable SEO</p>
+          </div>
+
+          <div class="team-member" data-aos="flip-left" data-aos-delay="300">
+            <img
+              src="img/team/member3.png"
+              alt="Sophie Martin"
+              class="team-photo"
+            />
+            <h3>Sophie Martin</h3>
+            <p>Spécialiste Meta Ads</p>
+          </div>
+
+          <div class="team-member" data-aos="flip-left" data-aos-delay="400">
+            <img
+              src="img/team/member4.png"
+              alt="Julien Moreau"
+              class="team-photo"
+            />
+            <h3>Julien Moreau</h3>
+            <p>Développeur Web</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+   PORTFOLIO / ÉTUDES DE CAS
+   ======================= -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 data-aos="fade-up">Nos réalisations</h2>
+        <div class="portfolio-grid">
+          <!-- Cas 1 -->
+          <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="img/portfolio/site1.png" alt="Site pour StartUpX" />
+            <div class="portfolio-overlay">
+              <h3>StartUpX</h3>
+              <p>
+                Site e-commerce sur-mesure – Augmentation du trafic de +80 %
+              </p>
+            </div>
+          </div>
+          <!-- Cas 2 -->
+          <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="img/portfolio/ad1.jpeg"
+              alt="Campagne Meta Ads pour OmegaCorp"
+            />
+            <div class="portfolio-overlay">
+              <h3>OmegaCorp</h3>
+              <p>Campagne Meta Ads – ROI x4 en 2 mois</p>
+            </div>
+          </div>
+          <!-- Cas 3 -->
+          <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="img/portfolio/seo1.jpg" alt="SEO pour TechVision" />
+            <div class="portfolio-overlay">
+              <h3>TechVision</h3>
+              <p>Audit SEO – Passage de la page 3 à la page 1 en 4 mois</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+   CRÉDIBILITÉ
+   ======================= -->
+    <section id="credibilite">
+      <div class="container">
+        <!-- Titre de la section -->
+        <h2 data-aos="fade-up">Ils nous font confiance</h2>
+
+        <!-- Logos des clients -->
+        <div class="clients-logos" data-aos="fade-up" data-aos-delay="100">
+          <!-- Remplacez les src par vos propres fichiers dans img/clients/ -->
+          <img src="img/clients/client1.png" alt="Client 1" />
+          <img src="img/clients/client2.png" alt="Client 2" />
+          <img src="img/clients/client3.png" alt="Client 3" />
+          <img src="img/clients/client4.png" alt="Client 4" />
+          <img src="img/clients/client5.png" alt="Client 5" />
+          <img src="img/clients/client6.png" alt="Client 6" />
+        </div>
+
+        <!-- Chiffres clés -->
+        <div class="stats">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="counter" data-target="50">500</span>+
+            <p>Clients satisfaits</p>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="counter" data-target="120">300</span>+
+            <p>Projets réalisés</p>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="counter" data-target="500">2</span>k+
+            <p>Leads générés</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section Témoignages -->
     <section id="testimonials">
       <div class="container">
@@ -225,6 +391,54 @@
       </div>
     </section>
 
+    <!-- =======================
+   NEWSLETTER
+   ======================= -->
+    <section id="newsletter">
+      <div class="container">
+        <h2 data-aos="fade-up">Abonnez-vous à notre Newsletter</h2>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Restez informé des dernières tendances en marketing digital.
+        </p>
+
+        <!-- Formulaire Mailchimp (modifiez l'URL action et les name selon Mailchimp) -->
+        <form
+          action="https://YOUR_MAILCHIMP_URL"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          target="_blank"
+          novalidate
+          class="newsletter-form"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="form-group-inline">
+            <input
+              type="email"
+              name="EMAIL"
+              class="email-input"
+              id="mce-EMAIL"
+              placeholder="Votre adresse e-mail"
+              required
+            />
+            <button
+              type="submit"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              class="btn-cta"
+            >
+              S’abonner
+            </button>
+          </div>
+          <!-- Zone cachée pour robots, générée par Mailchimp -->
+          <div style="position: absolute; left: -5000px" aria-hidden="true">
+            <input type="text" name="b_xxxxxx_xxxxxx" tabindex="-1" value="" />
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Section Contact -->
     <section id="contact">
       <div class="container">
@@ -269,6 +483,8 @@
         </form>
       </div>
     </section>
+    <!-- BOUTON SCROLL TOP -->
+    <button id="scrollTopBtn" aria-label="Retour en haut">↑</button>
     <!-- Footer -->
     <footer id="footer">
       <div class="container footer-container">
@@ -282,6 +498,7 @@
         <p class="legal"><a href="#">Mentions légales</a></p>
       </div>
     </footer>
+    <!-- Fichiers JavaScript -->
     <script src="js/scripts.js"></script>
 
     <!-- Ici on ajoutera, plus bas, Services / À propos / Témoignages / Contact / Footer -->
