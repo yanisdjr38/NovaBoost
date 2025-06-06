@@ -16,3 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
+
+// FAQ toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach((item) => {
+    const btn = item.querySelector(".faq-question");
+    btn.addEventListener("click", () => {
+      // Fermer tous avant d’ouvrir celui-ci (optionnel)
+      items.forEach((i) => {
+        if (i !== item) i.classList.remove("open");
+      });
+      // Basculer ouverture/fermeture
+      item.classList.toggle("open");
+    });
+  });
+});

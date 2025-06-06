@@ -11,8 +11,15 @@
     />
     <!-- Fichier CSS principal -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
     <!-- Header principale -->
     <header id="header">
       <div class="container header-container">
@@ -55,10 +62,10 @@
     <!-- Section Services -->
     <section id="services">
       <div class="container">
-        <h2>Nos services</h2>
+        <h2 data-aos="fade-up">Nos services</h2>
         <div class="services-grid">
           <!-- Service 1 -->
-          <article class="service-card">
+          <article class="service-card" data-aos="zoom-in" data-aos-delay="100">
             <img
               src="img/services/creation.png"
               alt="Création de site web"
@@ -72,7 +79,7 @@
           </article>
 
           <!-- Service 2 -->
-          <article class="service-card">
+          <article class="service-card" data-aos="zoom-in" data-aos-delay="200">
             <img
               src="img/services/meta-ads.png"
               alt="Publicité Meta Ads"
@@ -86,7 +93,7 @@
           </article>
 
           <!-- Service 3 -->
-          <article class="service-card">
+          <article class="service-card" data-aos="zoom-in" data-aos-delay="300">
             <img
               src="img/services/seo.png"
               alt="SEO / Référencement"
@@ -104,8 +111,8 @@
     <!-- Section À propos -->
     <section id="about">
       <div class="container">
-        <h2>À propos de NovaBoost</h2>
-        <p>
+        <h2 data-aos="fade-up">À propos de NovaBoost"</h2>
+        <p data-aos="fade-up" data-aos-delay="100">
           Chez NovaBoost, nous sommes une équipe de passionnés du digital. Notre
           mission : accompagner les entreprises dans leur croissance en ligne
           grâce à des stratégies sur mesure et des campagnes percutantes. Forts
@@ -117,10 +124,14 @@
     <!-- Section Témoignages -->
     <section id="testimonials">
       <div class="container">
-        <h2>Témoignages</h2>
+        <h2 data-aos="fade-up">Témoignages</h2>
         <div class="testimonials-grid">
           <!-- Témoignage 1 -->
-          <div class="testimonial-card">
+          <div
+            class="testimonial-card"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <img
               src="img/testimonials/t1.png"
               alt="Jean Dupont"
@@ -133,7 +144,11 @@
             <p class="testimonial-author">Jean Dupont – CEO de StartUpX</p>
           </div>
           <!-- Témoignage 2 -->
-          <div class="testimonial-card">
+          <div
+            class="testimonial-card"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <img
               src="img/testimonials/t2.png"
               alt="Marie Martin"
@@ -150,6 +165,66 @@
         </div>
       </div>
     </section>
+
+    <!-- =======================
+   FAQ
+   ======================= -->
+    <section id="faq">
+      <div class="container">
+        <h2 data-aos="fade-up">Questions fréquentes</h2>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-question">
+              Comment se déroule la prise de brief pour un site web ?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Nous commençons par un échange détaillé (vidéo ou présentiel)
+                pour comprendre vos besoins, votre cible et vos objectifs.
+                Ensuite, nous établissons un cahier des charges que nous
+                validons ensemble avant de lancer le design.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <button class="faq-question">
+              Combien de temps faut-il pour lancer une campagne Meta Ads ?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Généralement, le paramétrage initial (ciblage, création des
+                visuels et copywriting) prend 1 à 2 semaines. Ensuite, la
+                diffusion commence dès validation, et on suit les performances
+                au jour le jour.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <button class="faq-question">
+              Quelle est la durée nécessaire pour optimiser le SEO d’un site ?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                L’optimisation SEO est un travail continu, mais on obtient
+                souvent les premiers résultats visibles (hausse de
+                positionnement) au bout de 3 à 4 mois, selon le secteur et la
+                concurrence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section Contact -->
     <section id="contact">
       <div class="container">
@@ -210,5 +285,28 @@
     <script src="js/scripts.js"></script>
 
     <!-- Ici on ajoutera, plus bas, Services / À propos / Témoignages / Contact / Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 800, // durée de l’animation en ms
+          once: true, // n’anime qu’une fois au scroll
+          offset: 100, // déclenchement quand l’élément est à 100px du viewport
+        });
+      });
+    </script>
+    <script>
+      // Quand tout le contenu est chargé, on masque le préloader
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        preloader.style.transition = "opacity 0.5s ease";
+
+        // On retire l’élément du DOM après la transition
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      });
+    </script>
   </body>
 </html>

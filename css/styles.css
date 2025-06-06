@@ -1,3 +1,33 @@
+/* =====================
+   PRELOADER (au tout début)
+   ===================== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* fond blanc (ou votre couleur) */
+  z-index: 9999; /* au-dessus de tout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd; /* base gris clair */
+  border-top: 6px solid #ff6f61; /* couleur dynamique (rouge corail) */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Réinitialisation basique (vous pouvez utiliser Normalize.css si vous préférez) */
 * {
   margin: 0;
@@ -66,7 +96,6 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 /* ---------- HEADER ---------- */
 #header {
   width: 100%;
@@ -158,11 +187,12 @@ ul {
   border-radius: 25px;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-cta:hover {
   background-color: #e65b50;
+  transform: scale(1.02); /* augmente légèrement */
 }
 
 /* Conteur de l'image en background */
@@ -198,6 +228,12 @@ ul {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* lève légèrement la carte */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .service-icon {
   width: 10em;
@@ -279,6 +315,98 @@ ul {
   font-size: 16px;
   color: #1f3a93;
   font-weight: 600;
+}
+
+/* =======================
+   SECTION FAQ
+   ======================= */
+#faq {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+#faq h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: #1f3a93;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 20px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #1f3a93;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #e9e9e9;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  padding: 0 20px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer p {
+  margin: 15px 0;
+}
+
+/* État ouvert */
+.faq-item.open .faq-answer {
+  max-height: 500px; /* assez grand pour tout le contenu */
+  padding: 20px;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg); /* + devient × */
+}
+
+/* Responsive : réduire la taille des titres sur mobile */
+@media (max-width: 480px) {
+  #faq h2 {
+    font-size: 28px;
+  }
+  .faq-question {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .faq-answer {
+    font-size: 15px;
+  }
 }
 
 /* ---------- CONTACT ---------- */
